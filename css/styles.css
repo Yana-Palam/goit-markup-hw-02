@@ -40,8 +40,8 @@
         color: var(--accent-color);
     }
 /* nav и address */
-    .main-nav .link,
-    .address .link {
+    .main-nav,
+    .header-address {
         font-weight: 500;
         line-height: 1.14;
         letter-spacing: 0.02em;
@@ -52,14 +52,14 @@
         color: var(--title-text-color);
     }
 
-    .address .link {
+    .header-address .link {
         color: var(--primary-text-color);
     }
 
     .main-nav :hover,
     .main-nav :focus,
-    .address :hover,
-    .address :focus {
+    .header-address :hover,
+    .header-address :focus {
         color: var(--accent-color);
     }
     .main-nav .link.current {
@@ -78,6 +78,7 @@
     /* hero */
     .hero {
         text-align: center;
+        background-color: #2F303A;            /*для просмотра белого текста на герое*/
     }
     
     .hero-title {
@@ -87,8 +88,7 @@
         letter-spacing: 0.06em;
         text-transform: uppercase;
         
-        color: #FFFFFF;
-        background-color: #2F303A; /*для просмотра белого текста на герое*/        
+        color: #FFFFFF;       
     }
 
     .hero-btn {
@@ -99,8 +99,12 @@
         letter-spacing: 0.06em;
         
         color: var(--primary-white-color);
-        background-color: var(--accent-color);
-        
+        background-color: var(--accent-color);        
+    }
+
+    .hero-btn:hover,
+    .hero-btn:focus {
+        background-color: #188CE8;
     }
     
     .btn {
@@ -136,6 +140,9 @@
     /* Чем мы занимаемся  */
 
     /* Наша команда */
+    .team {
+        background-color: var(--secondary-color);
+    }
     .team .title {
         font-weight: 500;
         font-size: 16px;
@@ -149,16 +156,28 @@
     .page-futer {
     background-color: #2F303A; /*для просмотра белого текста на логотипе*/
     }
+
     .page-futer .accent-logo,
     .futer-address {
-         line-height: 1.71;
          color: var(--primary-white-color);
     }
-   
-    .futer-address {
+ 
+    .futer-address,
+    .page-futer .address-list {
         font-style: normal;
+        line-height: 1.71;
+        font-weight: inherit;
     }
 
+    .futer-address .address-link {
+        color: rgba(255, 255, 255, 0.6);
+    }
+   
+        .address-list :hover,
+        .address-list :focus {
+            color: var(--accent-color);
+        }
+        
     /* Страница Портфолио */
     /* Фильтр проектов */
     .filter-btn {
